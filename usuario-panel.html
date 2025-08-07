@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Usuario</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <h2>Registros de Ingreso</h2>
+  <table border="1" id="tabla">
+    <thead>
+      <tr>
+        <th>Fecha Registro</th>
+        <th>Nombre</th>
+        <th>RUT</th>
+        <th>Curso</th>
+        <th>Hora Escaneo</th>
+      </tr>
+    </thead>
+    <tbody id="datos"></tbody>
+  </table>
+  <script>
+    const SHEET_ID = "TU_ID_DE_HOJA";
+    const URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+    fetch(URL)
+      .then(res => res.text())
+      .then(text => {
+        const json = JSON.parse(text.substr(47).slice(0, -2));
+        const rows = json.table.rows;
+        const datos = rows.map(r => r.c.map(c => c?.v || ""));
+        const tbody = document.getElementById("datos");
+        tbody.innerHTML = "";
+        datos.forEach(row => {
+          const tr = document.createElement("tr");
+          row.forEach(cell => {
+            const td = document.createElement("td");
+            td.textContent = cell;
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+      });
+  </script>
+</body>
+</html>

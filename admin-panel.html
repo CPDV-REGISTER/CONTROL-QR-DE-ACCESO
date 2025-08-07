@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <h2>Panel de Administrador</h2>
+  <div>
+    <label>Buscar: <input type="text" id="buscar" placeholder="Nombre, RUT o curso..."></label>
+    <button onclick="descargarExcel()">Exportar Excel</button>
+  </div>
+  <table border="1" id="tabla">
+    <thead>
+      <tr>
+        <th>Fecha Registro</th>
+        <th>Nombre</th>
+        <th>RUT</th>
+        <th>Curso</th>
+        <th>Hora Escaneo</th>
+      </tr>
+    </thead>
+    <tbody id="datos"></tbody>
+  </table>
+  <script src="assets/js/admin-panel.js"></script>
+</body>
+</html>
