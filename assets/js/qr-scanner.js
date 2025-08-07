@@ -1,5 +1,5 @@
 function registrarIngreso(datos) {
-  fetch("URL_DEL_WEBAPP_DE_GOOGLE_SHEETS", {
+  fetch("https://script.google.com/macros/s/AKfycbwuPU2hFdHHiSm7vyt0Ru2zYnXRDQYHMgajaoHGFkcdKE0vcWv8br2CL0hrt7kWz8XV/exec", {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/json" },
