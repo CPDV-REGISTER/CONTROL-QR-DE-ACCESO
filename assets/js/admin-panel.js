@@ -1,4 +1,4 @@
-const SHEET_ID = "AKfycbwuPU2hFdHHiSm7vyt0Ru2zYnXRDQYHMgajaoHGFkcdKE0vcWv8br2CL0hrt7kWz8XV";
+const SHEET_ID = "177yet9Zxhwtz9Dyl1_CzNvBAcJ866WT_y6btWmPXplw";
 const URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
 let registros = [];
 fetch(URL)
