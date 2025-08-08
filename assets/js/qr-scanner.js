@@ -1,10 +1,12 @@
 function registrarIngreso(datos) {
   fetch("https://script.google.com/macros/s/AKfycbzRFJFGkHsXcN_VeenheV_h-j4HGll9J3oXXI-5ZjnGCGhfu0N3rvU3nlVDbdzNLJ7y/exec", {
     method: "POST",
-    mode: "no-cors",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(datos),
-  });
+  })
+  .then(res => res.text())
+  .then(txt => console.log("Respuesta del servidor:", txt))
+  .catch(err => console.error("Error:", err));
 }
 function validarYRegistrar(decodedText) {
   try {
