@@ -1,5 +1,5 @@
 function registrarIngreso(datos) {
-  fetch("https://script.google.com/macros/s/AKfycbwuPU2hFdHHiSm7vyt0Ru2zYnXRDQYHMgajaoHGFkcdKE0vcWv8br2CL0hrt7kWz8XV/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzRFJFGkHsXcN_VeenheV_h-j4HGll9J3oXXI-5ZjnGCGhfu0N3rvU3nlVDbdzNLJ7y/exec", {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/json" },
