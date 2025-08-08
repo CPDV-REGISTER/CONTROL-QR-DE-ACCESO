@@ -1,5 +1,5 @@
 function registrarIngreso(datos) {
-  fetch("https://script.google.com/macros/s/AKfycbzRFJFGkHsXcN_VeenheV_h-j4HGll9J3oXXI-5ZjnGCGhfu0N3rvU3nlVDbdzNLJ7y/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzCqyMptzDlTGA7QsX4oNiZBKoHVnVKOs6TKTgix25AQ8hQ9jfcusOPGCDWwssR3J-Q/exec", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(datos),
